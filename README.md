@@ -9,7 +9,9 @@ This is my personal portfolio. I'm an M.Sc. Artificial Intelligence student at T
 - **Projects:** Sprint Copilot (an AI agent connecting GitHub, Jira, Slack, Notion and Google Calendar), a natural-language interface for a humanoid robot, WorkLog AI, a published food recommendation system, and more
 - **Experience:** research at CAIRO Lab and 2.9 years building enterprise e-commerce platforms at Accenture
 - **Skills:** AI agents and LLMs, Python, SQL, APIs, data, testing, cloud and DevOps
-- **Education, certifications and awards**
+- **Achievements:** the iChamp Client Focus Award, a published research paper, and more
+- **Education and certifications**
+- **CV download:** always the latest version of my CV
 
 ## How it's built
 
