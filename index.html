@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shravani Joshi · AI Engineer</title>
+<title>Shravani Joshi - AI Engineer &amp; Agentic AI Developer</title>
 <meta name="description" content="Shravani Joshi – M.Sc. Artificial Intelligence student at THWS, research assistant at CAIRO Lab, former software developer at Accenture. AI agents, Python, APIs and data.">
 <meta name="theme-color" content="#f5f8ff">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%233b82f6'/><stop offset='1' stop-color='%2322d3ee'/></linearGradient></defs><rect width='64' height='64' rx='16' fill='url(%23g)'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='700' font-size='26' fill='white'>SJ</text></svg>">
@@ -92,7 +92,7 @@
   nav ul a:hover, nav ul a.active { color: var(--blue); background: rgba(37,99,235,.1); }
 
   /* ---------- hero ---------- */
-  header.hero { min-height: calc(100vh - 62px); display: flex; flex-direction: column; justify-content: center; padding: 60px 0 40px; }
+  header.hero { display: flex; flex-direction: column; justify-content: center; padding: 110px 0 10px; }
   .status {
     display: inline-flex; align-items: center; gap: 10px; align-self: flex-start;
     padding: 7px 14px 7px 12px; border-radius: 999px; font-size: 13px; color: var(--text);
@@ -131,10 +131,47 @@
   @keyframes flow { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
   .btn svg { width: 17px; height: 17px; }
 
-  .scroll-hint { margin-top: 64px; display: flex; align-items: center; gap: 12px; color: var(--muted); font-size: 13px; }
+  .scroll-hint { margin-top: 36px; display: flex; align-items: center; gap: 12px; color: var(--muted); font-size: 13px; }
   .mouse { width: 22px; height: 34px; border: 2px solid var(--muted); border-radius: 12px; position: relative; }
   .mouse::after { content: ""; position: absolute; left: 50%; top: 6px; width: 3px; height: 7px; margin-left: -1.5px; border-radius: 2px; background: var(--cyan); animation: wheel 1.6s infinite; }
   @keyframes wheel { 0% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(10px); } }
+
+  /* ---------- hero role + tagline ---------- */
+  .role { font-size: clamp(16px, 2.2vw, 20px); font-weight: 600; color: var(--text); margin: -4px 0 14px; }
+  .role span { white-space: nowrap; }
+  @media (max-width: 640px) { .role span { white-space: normal; } }
+  .role i { font-style: normal; color: var(--sky); opacity: .6; margin: 0 6px; }
+  .tagline { font-size: 15px; color: var(--muted); max-width: 720px; margin: 0 0 30px; line-height: 1.8; }
+  .btn.cv { border-color: rgba(37,99,235,.35); color: var(--blue); }
+  .btn.cv svg { transition: transform .3s; }
+  .btn.cv:hover svg { transform: translateY(2px); }
+
+  /* ---------- achievements ---------- */
+  .ach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .ach { position: relative; overflow: hidden; padding: 24px 22px; border-radius: 18px; background: var(--card); border: 1px solid var(--line); backdrop-filter: blur(8px); transition: transform .35s cubic-bezier(.2,.8,.2,1), border-color .35s, box-shadow .35s; }
+  .ach:hover { transform: translateY(-5px); border-color: rgba(37,99,235,.4); box-shadow: 0 24px 50px -22px rgba(37,99,235,.4); }
+  .ach::after { content: ""; position: absolute; right: -40px; top: -40px; width: 120px; height: 120px; border-radius: 50%; background: radial-gradient(circle, rgba(59,130,246,.14), transparent 70%); }
+  .ach .big { font-size: 38px; font-weight: 800; letter-spacing: -1px; line-height: 1.1; margin-bottom: 8px; background: linear-gradient(120deg, var(--blue), var(--cyan)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .ach .emoji { font-size: 32px; line-height: 1.1; margin-bottom: 10px; display: inline-block; animation: bob2 4s ease-in-out infinite; }
+  @keyframes bob2 { 50% { transform: translateY(-4px) rotate(-4deg); } }
+  .ach h3 { margin: 0 0 6px; font-size: 17px; }
+  .ach p { margin: 0; color: var(--body); font-size: 14px; }
+  .ach small { display: block; margin-top: 10px; color: var(--cyan); font-weight: 600; font-size: 12px; letter-spacing: .3px; }
+
+  /* ---------- beyond work ---------- */
+  .hobbies { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .hobby { position: relative; overflow: hidden; padding: 26px 22px 24px; border-radius: 20px; background: var(--card); border: 1px solid var(--line); backdrop-filter: blur(8px); transition: transform .35s cubic-bezier(.2,.8,.2,1), border-color .35s, box-shadow .35s; }
+  .hobby:hover { transform: translateY(-6px) rotate(-.6deg); border-color: rgba(37,99,235,.4); box-shadow: 0 24px 50px -22px rgba(37,99,235,.4); }
+  .hobby .h-ic { width: 54px; height: 54px; border-radius: 16px; display: grid; place-items: center; font-size: 26px; margin-bottom: 16px; background: linear-gradient(135deg, rgba(37,99,235,.12), rgba(99,102,241,.12)); border: 1px solid var(--line); transition: transform .4s; }
+  .hobby:hover .h-ic { transform: scale(1.12) rotate(-8deg); }
+  .hobby h3 { margin: 0 0 6px; font-size: 18px; }
+  .hobby p { margin: 0; color: var(--body); font-size: 14px; }
+  .hobby .deva { position: absolute; right: 14px; top: 6px; font-size: 44px; font-weight: 700; color: var(--blue); opacity: .07; pointer-events: none; }
+  .hobby .h-link { display: flex; align-items: center; gap: 6px; margin-top: 14px; font-size: 14px; font-weight: 600; color: var(--blue); }
+  .hobby .h-link span { transition: transform .25s; }
+  .hobby .h-link:hover { text-decoration: none; }
+  .hobby .h-link:hover span { transform: translateX(5px); }
+  .hobby .h-tag { display: inline-block; margin-top: 12px; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 999px; color: var(--cyan); background: rgba(8,145,178,.07); border: 1px solid rgba(8,145,178,.22); }
 
   /* ---------- stats ---------- */
   .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 44px 0 0; }
@@ -147,6 +184,7 @@
 
   /* ---------- sections ---------- */
   section { padding: 96px 0 20px; }
+  section#projects { padding-top: 64px; }
   .kicker { color: var(--cyan); font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 10px; }
   h2 { font-size: clamp(30px, 4.5vw, 42px); margin: 0 0 40px; letter-spacing: -1px; line-height: 1.15; }
   h2 span { color: var(--muted); font-weight: 500; }
@@ -190,6 +228,11 @@
   .arrow::after { content: ""; position: absolute; top: -2px; left: -10px; width: 10px; height: 6px; border-radius: 3px; background: var(--blue); box-shadow: 0 0 8px var(--sky); animation: travel 1.6s linear infinite; }
   @keyframes travel { to { left: 100%; } }
 
+  .proj-links { display: flex; flex-wrap: wrap; gap: 8px 26px; margin-top: 16px; }
+  .proj-link { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--blue); }
+  .proj-link span { transition: transform .25s; }
+  .proj-link:hover { text-decoration: none; }
+  .proj-link:hover span { transform: translateX(5px); }
   /* ---------- timeline ---------- */
   .timeline { position: relative; padding-left: 34px; }
   .timeline::before { content: ""; position: absolute; left: 9px; top: 6px; bottom: 6px; width: 2px; background: linear-gradient(var(--cyan), var(--blue), transparent); }
@@ -257,12 +300,15 @@
   @media (max-width: 860px) {
     .skills { grid-template-columns: 1fr 1fr; }
     .stats { grid-template-columns: 1fr 1fr; }
+    .ach-grid, .hobbies { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 640px) {
     nav ul { gap: 0; font-size: 13px; }
     nav ul a { padding: 6px 8px; }
     nav .hide-sm { display: none; }
-    .grid, .two, .skills { grid-template-columns: 1fr; }
+    .grid, .two, .skills, .ach-grid { grid-template-columns: 1fr; }
+    .hobbies { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .hobby { padding: 20px 16px; }
     .card.feature { grid-column: auto; }
     h1 { letter-spacing: -1.5px; }
     section { padding-top: 72px; }
@@ -287,6 +333,7 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li class="hide-sm"><a href="#achievements">Achievements</a></li>
       <li class="hide-sm"><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -297,33 +344,14 @@
 
   <!-- ================= HERO ================= -->
   <header class="hero">
-    <h1 class="reveal d1">Hi, I'm <span class="grad">Shravani Joshi.</span></h1>
+    <h1 class="reveal d1"><span class="grad">Shravani Joshi</span></h1>
+    <p class="role reveal d1"><span>HiWi @ CAIRO Lab</span> <i>|</i> <span>M.Sc. AI @ THWS, Germany</span> <i>|</i> <span>Former SAP Commerce Cloud Developer @ Accenture</span></p>
     <p class="typeline reveal d2">I build <span class="typed" id="typed"></span><span class="caret"></span></p>
     <p class="lead reveal d3">
-      M.Sc. Artificial Intelligence student at <b>THWS</b>, research assistant at <b>CAIRO Lab</b>, and
-      former software developer at <b>Accenture</b>, where I spent 2.9 years shipping features for enterprise e-commerce platforms.
+      I like turning slow, manual work into simple tools that just run. After almost three years building enterprise
+      e-commerce platforms at Accenture, I moved to Germany to study AI. Today I build <b>AI agents</b>, <b>LLM-powered tools</b>
+      and <b>data pipelines</b> in Python, always with the people who will use them in mind.
     </p>
-    <div class="actions reveal d4">
-      <a class="btn primary" href="mailto:shravanijoshi0308@gmail.com">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-        Get in touch
-      </a>
-      <a class="btn" href="https://www.linkedin.com/in/shravani-joshi-7320a921a" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg>
-        LinkedIn
-      </a>
-      <a class="btn" href="https://github.com/shravanijoshi0308" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
-        GitHub
-      </a>
-    </div>
-
-    <div class="stats">
-      <div class="stat reveal d1"><div class="num" data-count="2.9" data-dec="1">0</div><div class="lbl">years in industry</div></div>
-      <div class="stat reveal d2"><div class="num" data-count="5">0</div><div class="lbl">APIs in one AI agent</div></div>
-      <div class="stat reveal d3"><div class="num" data-count="8.77" data-dec="2">0</div><div class="lbl">B.Tech CGPA / 10</div></div>
-      <div class="stat reveal d4"><div class="num" data-count="1">0</div><div class="lbl">published paper</div></div>
-    </div>
 
     <div class="scroll-hint reveal"><span class="mouse"></span>Scroll to explore</div>
   </header>
@@ -378,6 +406,30 @@
         <p class="sub">Personal project</p>
         <p>A cross-platform developer activity tracker that observes work sessions and uses an LLM to turn them into structured daily summaries.</p>
         <div class="tags"><span class="tag">Python</span><span class="tag">LLM summarisation</span></div>
+      </article>
+
+      <article class="card feature reveal">
+        <div class="top">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v5"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.6"/><path d="M12 17v3M10 22h4"/></svg></div>
+          <span class="badge">Full-stack · Personal project</span>
+        </div>
+        <h3>Lumosia</h3>
+        <p class="sub">A good-luck charm that sways from your Mac's menu bar, plus a web app where you sign in and choose your charm.</p>
+        <div class="flow" aria-label="Lumosia architecture">
+          <span class="node">Mac app</span><span class="node">Web app</span>
+          <span class="arrow"></span><span class="node core">Spring Boot</span><span class="arrow"></span>
+          <span class="node">Spring Security</span><span class="node">Database</span>
+        </div>
+        <ul>
+          <li>Desktop app built with Electron: a transparent, click-through overlay that hangs the chosen charm under the menu bar, with a charm picker in the menu bar.</li>
+          <li>Web companion with sign-up, login and session authentication. First prototype in Node.js and Express, now rebuilt in Java and Spring Boot with Spring Security, BCrypt password hashing, JPA/Hibernate and an H2 database.</li>
+          <li>Built step by step with Git branches and pull requests. Next up: a charm picker that saves each user's choice to their account.</li>
+        </ul>
+        <div class="tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Spring Security</span><span class="tag">JPA / Hibernate</span><span class="tag">Electron</span><span class="tag">JavaScript</span><span class="tag">Node.js</span><span class="tag">Git</span></div>
+        <div class="proj-links">
+          <a class="proj-link" href="https://github.com/shravanijoshi0308/project-lumosia" target="_blank" rel="noopener">Desktop app on GitHub <span>→</span></a>
+          <a class="proj-link" href="https://github.com/shravanijoshi0308/lumosia-backend" target="_blank" rel="noopener">Web backend on GitHub <span>→</span></a>
+        </div>
       </article>
 
       <article class="card reveal d1">
@@ -465,9 +517,23 @@
     </div>
   </section>
 
+  <!-- ================= ACHIEVEMENTS ================= -->
+  <section id="achievements">
+    <p class="kicker reveal">Achievements</p>
+    <h2 class="reveal">Milestones <span>along the way.</span></h2>
+    <div class="ach-grid">
+      <div class="ach reveal"><span class="emoji">🏆</span><h3>iChamp Client Focus Award</h3><p>Recognised by Accenture Song, ATCI India, for persistent commitment towards outstanding client service.</p><small>ACCENTURE · JULY 2025</small></div>
+      <div class="ach reveal d1"><span class="emoji">📄</span><h3>Published research paper</h3><p>Food Recommendation of Indian Cuisine Recipes Based on Ingredients, International Journal of Engineering and Technology.</p><small>IJET · 2022</small></div>
+      <div class="ach reveal d2"><div class="big" data-count="5">0</div><h3>APIs in one AI agent</h3><p>Sprint Copilot connects GitHub, Jira, Slack, Notion and Google Calendar to automate scrum-master coordination.</p><small>HACKATHON · 2026</small></div>
+      <div class="ach reveal"><div class="big" data-count="2.9" data-dec="1" data-suffix=" yrs">0</div><h3>Years in industry</h3><p>Software developer at Accenture, shipping features for enterprise e-commerce platforms.</p><small>ACCENTURE · 2023 – 2026</small></div>
+      <div class="ach reveal d1"><div class="big" data-count="8.77" data-dec="2">0</div><h3>B.Tech CGPA out of 10</h3><p>Information Technology, JNTU Hyderabad, First Class with Distinction.</p><small>2020 – 2023</small></div>
+      <div class="ach reveal d2"><div class="big" data-count="81.74" data-dec="2" data-suffix="%">0</div><h3>Diploma score</h3><p>Electronics &amp; Communication Engineering, First Class with Distinction.</p><small>2017 – 2020</small></div>
+    </div>
+  </section>
+
   <!-- ================= EDUCATION + CERTS ================= -->
   <section id="education">
-    <p class="kicker reveal">Education &amp; recognition</p>
+    <p class="kicker reveal">Education &amp; certifications</p>
     <h2 class="reveal">Learning <span>never stopped.</span></h2>
 
     <div class="two">
@@ -491,8 +557,6 @@
 
       <div class="edu reveal d1">
         <ul class="certs">
-          <li><span class="ic">🏆</span><span><b>iChamp Client Focus Award</b><small>Accenture · 2025</small></span></li>
-          <li><span class="ic">📄</span><span><b>Food Recommendation of Indian Cuisine Recipes Based on Ingredients</b><small>Publication · IJET · 2022</small></span></li>
           <li><span class="ic">✔</span><span><b>SAP Certified Development Professional – Commerce Cloud 2211</b><small>SAP</small></span></li>
           <li><span class="ic">✦</span><span><b>SAP AI Masterclass – Generative AI, Joule, AI Core &amp; BTP</b><small>SAP</small></span></li>
           <li><span class="ic">⌘</span><span><b>GitHub Copilot: Developer Use Cases &amp; Code Reviews</b><small>GitHub</small></span></li>
@@ -503,6 +567,18 @@
     </div>
   </section>
 
+  <!-- ================= BEYOND WORK ================= -->
+  <section id="beyond">
+    <p class="kicker reveal">Beyond work</p>
+    <h2 class="reveal">Life outside <span>the code.</span></h2>
+    <div class="hobbies">
+      <div class="hobby reveal"><span class="deva" lang="hi">लेखन</span><div class="h-ic">✍️</div><h3>Writing</h3><p>I write in Hindi and publish my pieces on my blog.</p><span class="h-tag" lang="hi">हिन्दी</span><a class="h-link" href="https://shravzz0311.blogspot.com" target="_blank" rel="noopener">Read my writing <span>→</span></a></div>
+      <div class="hobby reveal d1"><span class="deva" lang="hi">संगीत</span><div class="h-ic">🎤</div><h3>Singing</h3><p>Music is how I unwind and recharge.</p></div>
+      <div class="hobby reveal d2"><span class="deva" lang="hi">रसोई</span><div class="h-ic">🍳</div><h3>Cooking</h3><p>I love to cook. Fittingly, my first published paper was a recipe recommender.</p></div>
+      <div class="hobby reveal d3"><span class="deva" lang="hi">कला</span><div class="h-ic">🎨</div><h3>Art</h3><p>Art keeps me creative away from the screen.</p></div>
+    </div>
+  </section>
+
   <!-- ================= CONTACT ================= -->
   <section id="contact" class="contact reveal">
     <p class="kicker">Contact</p>
@@ -510,6 +586,7 @@
     <p>I'm looking for working student roles in AI engineering, AI agents and data. Based in Würzburg · English (C1) · German (A2).</p>
     <div class="actions">
       <a class="btn primary" href="mailto:shravanijoshi0308@gmail.com">shravanijoshi0308@gmail.com</a>
+      <a class="btn cv" href="Shravani_Joshi_CV.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16"/></svg> Download CV</a>
       <a class="btn" href="https://www.linkedin.com/in/shravani-joshi-7320a921a" target="_blank" rel="noopener">LinkedIn</a>
       <a class="btn" href="https://github.com/shravanijoshi0308" target="_blank" rel="noopener">GitHub</a>
     </div>
@@ -544,11 +621,12 @@
   /* ---- reveal on scroll + count-up ---- */
   const countUp = (n) => {
     const target = parseFloat(n.dataset.count), dec = +(n.dataset.dec || 0);
-    if (reduce) { n.textContent = target.toFixed(dec); return; }
+    const suf = n.dataset.suffix || "";
+    if (reduce) { n.textContent = target.toFixed(dec) + suf; return; }
     const t0 = performance.now(), dur = 1400;
     const step = (t) => {
       const p = Math.min((t - t0) / dur, 1), e = 1 - Math.pow(1 - p, 3);
-      n.textContent = (target * e).toFixed(dec);
+      n.textContent = (target * e).toFixed(dec) + suf;
       if (p < 1) requestAnimationFrame(step);
     };
     requestAnimationFrame(step);
